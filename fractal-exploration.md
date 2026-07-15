@@ -26,14 +26,14 @@ $$f(x) = \sum_{n=0}^{\infty} \text{Dampener}(n) \cdot \text{Periodic Wave}(x, n)
 ### 1. The Classic Weierstrass Function
 The standard approach using a smooth, uniform cosine wave:
 
-* **Formula:** `f(x) = \sum_{n=0}^{50} (a^n * \cos(b^n * \pi * x))`
-* **Parameters:** `a = 0.5`, `b = 3`
+* **Formula:** $$f(x) = \sum_{n=0}^{50} (a^n * \cos(b^n * \pi * x))$$
+* **Parameters:** $$a = 0.5$$, $$b = 3$$
 
 ### 2. My Custom Non-Linear Fractal Function
 By replacing the standard linear periodic wave with a nested exponential function ($e^{\sin(x)}$), I engineered a non-linear variant that creates highly asymmetric, jagged peaks reminiscent of actual mountain ranges.
 
-* **Formula:** `f(x) = \sum_{n=0}^{50} (a^n * e^{\sin(b^n * x)})`
-* **Parameters:** `a = 0.5`, `b = 3.3`
+* **Formula:** $$f(x) = \sum_{n=0}^{50} (a^n * e^{\sin(b^n * x)})$$
+* **Parameters:** $$a = 0.5$$, $$b = 3.3$$
 
 *(Note: When setting $a=1$ or using $e^n$, the amplitude engine explodes because the layers grow larger instead of shrinking, causing the graph to diverge).*
 
