@@ -39,7 +39,7 @@ By replacing the standard linear periodic wave with a nested exponential functio
 * **Parameters:**  
   $$b = 3.3$$
 
-*(Note: When using $$e^n$$, the amplitude engine explodes because the layers grow larger instead of shrinking, causing the graph to diverge).*
+(Note: When using $$e^n$$, the amplitude engine explodes because the layers grow larger instead of shrinking, causing the graph to diverge).
 
 ---
 
