@@ -27,7 +27,7 @@ $$f(x) = \sum_{n=0}^{\infty} \text{Dampener}(n) \cdot \text{Periodic Wave}(x, n)
 The standard approach using a smooth, uniform cosine wave:
 
 * **Formula:**  
-  $$f(x) = \sum_{n=0}^{50} (e^{-n} \cdot \cos(b^n \cdot \pi \cdot x))$$
+  $$f(x) = \sum_{n=0}^{50} (a^{n} \cdot \cos(b^n \cdot \pi \cdot x))$$
 * **Parameters:**  
   $$b = 3$$
 
@@ -39,7 +39,7 @@ By replacing the standard linear periodic wave with a nested exponential functio
 * **Parameters:**  
   $$b = 3.3$$
 
-*(Note: When using $e^n$, the amplitude engine explodes because the layers grow larger instead of shrinking, causing the graph to diverge).*
+*(Note: When using $$e^n$$, the amplitude engine explodes because the layers grow larger instead of shrinking, causing the graph to diverge).*
 
 ---
 
