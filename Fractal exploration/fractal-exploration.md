@@ -15,9 +15,9 @@ Through experimentation in Desmos, I broke down the exact requirements needed to
 $$f(x) = \sum_{n=0}^{\infty} \text{Dampener}(n) \cdot \text{Periodic Wave}(x, n)$$
 
 ### The Core Requirements:
-1. **The Amplitude Dampener ($a^n$ where $0 < a < 1$):** Ensures that the height of successive layers shrinks exponentially so the infinite series safely converges to a finite, continuous curve instead of exploding to infinity.
+1. **The Amplitude Dampener ($e^{-n}$):** Ensures that the height of successive layers shrinks exponentially so the infinite series safely converges to a finite, continuous curve instead of exploding to infinity.
 2. **The Frequency Booster ($b^n$ where $b > 1$):** Compresses the width of the wave exponentially, forcing each new layer to ripple faster.
-3. **The Chaos Rule ($ab > 1$):** Forces the slopes of the microscopic wrinkles to grow steeper faster than their heights shrink, violently shattering differentiability at every scale.
+3. **The Chaos Rule ($e^{-1}b > 1$ or $b > e$):** Forces the slopes of the microscopic wrinkles to grow steeper faster than their heights shrink, violently shattering differentiability at every scale.
 
 ---
 
@@ -26,26 +26,33 @@ $$f(x) = \sum_{n=0}^{\infty} \text{Dampener}(n) \cdot \text{Periodic Wave}(x, n)
 ### 1. The Classic Weierstrass Function
 The standard approach using a smooth, uniform cosine wave:
 
-* **Formula:** $$f(x) = \sum_{n=0}^{50} (a^n * \cos(b^n * \pi * x))$$
-* **Parameters:** $$a = 0.5$$, $$b = 3$$
+* **Formula:**  
+  $$f(x) = \sum_{n=0}^{50} (e^{-n} \cdot \cos(b^n \cdot \pi \cdot x))$$
+* **Parameters:**  
+  $$b = 3$$
 
 ### 2. My Custom Non-Linear Fractal Function
 By replacing the standard linear periodic wave with a nested exponential function ($e^{\sin(x)}$), I engineered a non-linear variant that creates highly asymmetric, jagged peaks reminiscent of actual mountain ranges.
 
-* **Formula:** $$f(x) = \sum_{n=0}^{50} (a^n * e^{\sin(b^n * x)})$$
-* **Parameters:** $$a = 0.5$$, $$b = 3.3$$
+* **Formula:**  
+  $$f(x) = \sum_{n=0}^{50} (e^{-n} \cdot e^{\sin(b^n \cdot x)})$$
+* **Parameters:**  
+  $$b = 3.3$$
 
-*(Note: When setting $a=1$ or using $e^n$, the amplitude engine explodes because the layers grow larger instead of shrinking, causing the graph to diverge).*
+*(Note: When using $e^n$, the amplitude engine explodes because the layers grow larger instead of shrinking, causing the graph to diverge).*
 
 ---
 
 ## 📊 How to View and Interact
 You can instantly visualize these simulations using Desmos:
 1. Open [Desmos Graphing Calculator](https://www.desmos.com/calculator).
-2. Paste the formula lines and set up sliders for `a` and `b`.
+2. Paste the formula lines and set up a slider for `b` (ensure $b > 2.718$ to maintain the fractal property).
 3. Test the **"Zoom-In Test"**—no matter how deeply you magnify the curve, it will reveal an infinite universe of repeating, jagged textures, failing to ever flatten out into a straight line!
+### Visualizations
+
+#### My Custom Non-Linear Function
 ![My Fractal Graph](IMG_1539.jpeg)
-my function
-![My Fractal Graph](IMG_1540.jpeg)
-Weierstrass Function
+
+#### Classic Weierstrass Function
+![Weierstrass Function Graph](IMG_1540.jpeg)
 
